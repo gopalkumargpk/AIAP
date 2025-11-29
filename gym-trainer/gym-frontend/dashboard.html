@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard – Fitness-b7z</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dash-body">
+
+<div class="dash-layout">
+  
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="logo">Fitness-b7z</div>
+    <ul>
+      <li class="active">🏠 Dashboard</li>
+      <li>💪 Workout Plan</li>
+      <li>🥗 Diet Plan</li>
+      <li>📊 Progress</li>
+      <li>📅 Book Session</li>
+    </ul>
+    <button class="btn-primary logout-btn" onclick="logout()">Logout</button>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="dash-main">
+    <div class="dash-header">
+      <h2>Welcome, Champion 💪</h2>
+      <p>Your fitness overview</p>
+    </div>
+
+    <div class="dash-grid">
+      
+      <div class="dash-card">
+        <h3>Today's Workout</h3>
+        <ul>
+          <li>Push Ups – 3 × 20</li>
+          <li>Squats – 4 × 15</li>
+          <li>Plank – 3 × 60 sec</li>
+        </ul>
+      </div>
+
+      <div class="dash-card">
+        <h3>Today's Diet</h3>
+        <ul>
+          <li>Oats + Milk</li>
+          <li>Chicken + Rice</li>
+          <li>Salad + Eggs</li>
+        </ul>
+      </div>
+
+      <div class="dash-card">
+        <h3>Body Stats</h3>
+        <p>Weight: 72 kg</p>
+        <p>BMI: 23</p>
+        <p>Fat: 16%</p>
+      </div>
+
+      <div class="dash-card">
+        <h3>Next Session</h3>
+        <p>Tomorrow @ 6PM</p>
+        <button class="btn-small">Reschedule</button>
+      </div>
+
+    </div>
+  </main>
+</div>
+
+<script>
+function logout(){
+  localStorage.removeItem("user");
+  window.location.href="index.html";
+}
+</script>
+
+</body>
+</html>

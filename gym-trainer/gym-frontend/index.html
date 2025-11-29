@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fitness-b7z – Personal Gym Trainer</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="logo">Fitness-b7z</div>
+  <nav>
+    <a href="#services">Services</a>
+    <a href="#plans">Plans</a>
+    <a href="#videos">Videos</a>
+    <a href="#contact">Contact</a>
+    <button class="btn-primary" onclick="openLogin()">Login</button>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content-left">
+    <h1>TRANSFORM YOUR<br>BODY WITH PERSONAL TRAINING</h1>
+    <p>Custom workout and diet plans designed just for you.</p>
+    <button class="btn-primary pulse" onclick="openLogin()">Start Your Journey</button>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section" id="services">
+  <h2>Services</h2>
+  <p>1-on-1 sessions focused on your goals.</p>
+  <div class="cards">
+    <div class="card">
+      <img src="image/image1.jpg" alt="Training">
+      <h3>Personal Training</h3>
+      <p>1-on-1 sessions designed for your goals.</p>
+    </div>
+    <div class="card">
+      <img src="image/photo.jpg" alt="Online">
+      <h3>Online Coaching</h3>
+      <p>Workout plans through the app.</p>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c" alt="Diet">
+      <h3>Diet Planning</h3>
+      <p>Nutrition plans for your body type.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PLANS -->
+<section class="section" id="plans">
+  <h2>Membership Plans</h2>
+
+  <div class="cards">
+    <div class="price-card">
+      <h3>Basic</h3>
+      <p class="price">₹999 <span>/month</span></p>
+      <p>3 workouts a week</p>
+    </div>
+    <div class="price-card highlight">
+      <h3>Pro</h3>
+      <p class="price">₹1999 <span>/month</span></p>
+      <p>Workout + Diet Plan</p>
+    </div>
+    <div class="price-card">
+      <h3>Elite</h3>
+      <p class="price">₹2999 <span>/month</span></p>
+      <p>Daily monitoring</p>
+    </div>
+  </div>
+</section>
+
+<!-- WORKOUT VIDEOS SECTION -->
+<section class="section" id="videos">
+  <h2>Workout Videos</h2>
+  <p>Follow my training videos and improve your form 💪</p>
+
+  <div class="video-grid">
+
+    <div class="video-card">
+      <img src="image/photo.jpg" class="video-thumb">
+      <h3>Boxing Training</h3>
+      <iframe src="https://www.youtube.com/embed/1ZnYZ2cbpwQ"
+              allowfullscreen></iframe>
+    </div>
+
+    
+<div class="video-card">
+  <img src="image/thumbnails/workout.jpg" class="video-thumb">
+  <h3>Strength Workout</h3>
+
+  <video controls>
+    <source src="video/video1.mp4" type="video/mp4">
+  </video>
+</div>
+
+    <div class="video-card">
+      <img src="image/photo.jpg" class="video-thumb">
+      <h3>Chest & Arms</h3>
+      <iframe src="https://www.youtube.com/embed/yId0hmMWySE"
+              allowfullscreen></iframe>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section" id="contact">
+  <h2>Contact</h2>
+  <p>Email: imgopal0101@gmail.com | +91 6204421818</p>
+  <div class="social-links">
+    <a class="yt" href="https://youtube.com/shorts/1ZnYZ2cbpwQ?si=qNWXyua0-hEahXx2" target="_blank">📺 YouTube</a>
+    <a class="ig" href="https://www.instagram.com/invites/contact/?utm_medium=copy_link&utm_content=3d2seer" target="_blank">📸 Instagram</a>
+    <a class="ln" href="https://www.linkedin.com/public-profile/settings" target="_blank">💼 LinkedIn</a>
+  </div>
+</section>
+
+<footer>© 2025 Fitness-b7z – All rights reserved.</footer>
+
+<!-- LOGIN POPUP -->
+<div id="loginModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeLogin()">×</span>
+    <h2 class="login-title">Client Login</h2>
+    <form onsubmit="return handleLogin(event)">
+      <input type="email" id="email" placeholder="Email" required>
+      <input type="password" id="password" placeholder="Password" required>
+      <button class="btn-primary" type="submit">Login</button>
+      <p id="error-msg" class="error"></p>
+    </form>
+  </div>
+</div>
+
+<script>
+function openLogin(){document.getElementById("loginModal").style.display="flex";}
+function closeLogin(){document.getElementById("loginModal").style.display="none";}
+function handleLogin(e){
+  e.preventDefault();
+  localStorage.setItem("user", document.getElementById("email").value);
+  window.location.href="dashboard.html";
+}
+</script>
+
+</body>
+</html>
